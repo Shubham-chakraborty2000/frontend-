@@ -1,8 +1,8 @@
 import "../css/MovieCard.css"
 import { useMovieContext } from "../contexts/MovieContext"
 function MovieCard({movie}){
-   const {isFavorite, addToFavorites, removeFromFavorites} = useMovieContext()
-   const favorite = isFavorite(movie.id)
+   const {isFavorites, addToFavorites, removeFromFavorites} = useMovieContext()
+   const favorite = isFavorites(movie.id)
     function onFavoriteClick(){
         event.preventDefault()
        if(favorite) removeFromFavorites(movie.id)
